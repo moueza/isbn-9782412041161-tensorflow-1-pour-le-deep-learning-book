@@ -1,0 +1,21 @@
+#ptl petit livre gl gd livre
+
+#ptl p32
+import tensorflow as tf
+#ptl p58
+import numpy as np
+
+
+#pl p42
+sess= tf.compat.v1.Session()
+
+#pl p64
+N=5
+with tf.name_scope("placeholders"):
+  x= tf.compat.v1.placeholder(tf.float32, (N, 1))
+  y= tf.compat.v1.placeholder(tf.float32, (N, ))
+
+  a= tf.constant(3)
+  b=tf.constant(4)
+  c=a+b
+  c.eval(session=sess)
